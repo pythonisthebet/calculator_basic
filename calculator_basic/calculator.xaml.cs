@@ -140,5 +140,8 @@ public partial class calculator : ContentPage
         return answer;
     }
 
-    
+    private void clear_Clicked(object sender, EventArgs e)
+    {
+        display.Text = "";
+    }
 }
