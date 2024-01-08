@@ -15,8 +15,17 @@ public partial class calculator : ContentPage
         
         if (display.Text[display.Text.Length - 1] >46)
         {
-            solution = solver();
-            display.Text = solution.ToString();
+            try
+            {
+                solution = solver();
+                display.Text = solution.ToString();
+            }
+            catch (Exception)
+            {
+                display.Text = "naughty boy/girl/thing";
+
+            }
+            
         }
 
 
