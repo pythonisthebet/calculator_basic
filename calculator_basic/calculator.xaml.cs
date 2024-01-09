@@ -13,7 +13,7 @@ public partial class calculator : ContentPage
     private void solve_Clicked(object sender, EventArgs e)
     {
         
-        if (display.Text[display.Text.Length - 1] >46)
+        if (display.Text[display.Text.Length - 1] >47)
         {
             try
             {
@@ -59,7 +59,7 @@ public partial class calculator : ContentPage
 
     private void plus_Clicked(object sender, EventArgs e)
     {
-        if (display.Text[display.Text.Length - 1] > 46)
+        if (display.Text[display.Text.Length - 1] > 47)
         {
             display.Text += "+";
         }

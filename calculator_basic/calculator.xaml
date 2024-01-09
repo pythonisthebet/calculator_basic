@@ -11,6 +11,7 @@
             VerticalOptions="Center" 
             HorizontalOptions="Fill"
             BackgroundColor="LightCyan"
+            Margin="20"
 />
         <Grid 
             ColumnSpacing="5" 
@@ -33,21 +34,25 @@
             <Button
                 x:Name="clear"
                 Text="Clear"
-                Grid.Row="4" 
-                Grid.ColumnSpan="4"
+                BackgroundColor="Orange"
+                
+                Grid.Row="3" 
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
                 Clicked="clear_Clicked"/>
             <Button
                 x:Name="solve"
                 Text="="
-                Grid.Row="3" 
-                Grid.Column="1"
-                Grid.ColumnSpan="2"
+                Grid.Row="5"
+                BackgroundColor="Orange"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
                 Clicked="solve_Clicked"/>
                 
             <Button 
                 x:Name="mult"
                 Text="*"
-
+                BackgroundColor="Orange"
                 Grid.Column="3"
                 Grid.Row="2"
                 Clicked="mult_Clicked"
@@ -55,7 +60,7 @@
             <Button 
                 x:Name="minus"
                 Text="-"
-
+                BackgroundColor="Orange"
                 Grid.Column="3"
                 Grid.Row="1"
                 Clicked="minus_Clicked"
@@ -63,7 +68,7 @@
             <Button 
                 x:Name="plus"
                 Text="+"
-
+                BackgroundColor="Orange"
                 Grid.Column="3"
                 Grid.Row="0"
                 Clicked="plus_Clicked"
@@ -71,7 +76,7 @@
             <Button 
                 x:Name="dev"
                 Text="/"
-
+                BackgroundColor="Orange"
                 Grid.Column="3"
                 Grid.Row="3"
                 Clicked="dev_Clicked"
