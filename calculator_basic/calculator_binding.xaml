@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calculator_basic.calculator_binding"
+             Title="calculator_binding">
+    <VerticalStackLayout>
+        <Label 
+            x:Name="lable"
+            Text="{Binding lable, Mode=TwoWay}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Fill"
+            BackgroundColor="LightCyan"
+            Margin="20"
+/>
+        <Grid 
+            ColumnSpacing="5" 
+            RowSpacing="5"
+            HorizontalOptions="FillAndExpand"
+            Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width= "2*"/>
+            </Grid.ColumnDefinitions>
+            <Button
+                x:Name="clear"
+                Text="Clear"
+                BackgroundColor="Orange"
+                
+                Grid.Row="3" 
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                Command ="{Binding operatorCommand}"
+                CommandParameter="a/c"/>
+                
+            
+            <Button
+                x:Name="solve"
+                Text="="
+                Grid.Row="5"
+                BackgroundColor="Orange"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Command ="{Binding solveCommand}"/>
+
+            <Button 
+                x:Name="mult"
+                Text="*"
+                BackgroundColor="Orange"
+                Grid.Column="3"
+                Grid.Row="2"
+                Command ="{Binding operatorCommand}"
+                CommandParameter="*"
+                />
+            <Button 
+                x:Name="minus"
+                Text="-"
+                BackgroundColor="Orange"
+                Grid.Column="3"
+                Grid.Row="1"
+                Command ="{Binding operatorCommand}"
+                CommandParameter="-"
+                />
+            <Button 
+                x:Name="plus"
+                Text="+"
+                BackgroundColor="Orange"
+                Grid.Column="3"
+                Grid.Row="0"
+                Command ="{Binding operatorCommand}"
+                CommandParameter="+"
+                />
+            <Button 
+                x:Name="dev"
+                Text="/"
+                BackgroundColor="Orange"
+                Grid.Column="3"
+                Grid.Row="3"
+                Command ="{Binding operatorCommand}"
+                CommandParameter="/"
+                />
+            <Button 
+                x:Name="one"
+                
+                Text="1"
+
+                Grid.Column="0"
+                Grid.Row="0"
+                Command ="{Binding operatorCommand}"
+                CommandParameter="1"
+                />
+            <Button 
+                x:Name="two"
+                Text="2"
+
+                Grid.Column="1"
+                Grid.Row="0"
+                Command ="{Binding operatorCommand}"
+                CommandParameter="2"
+                />
+            <Button 
+                x:Name="three"
+                Text="3"
+
+                Grid.Column="2"
+                Grid.Row="0"
+                Command ="{Binding operatorCommand}"
+                CommandParameter="3"
+                />
+            <Button 
+                x:Name="four"
+                Text="4"
+
+                Grid.Column="0"
+                Grid.Row="1"
+                Command ="{Binding operatorCommand}"
+                CommandParameter="4"
+                />
+            <Button 
+                x:Name="five"
+                Text="5"
+
+                Grid.Column="1"
+                Grid.Row="1"
+                Command ="{Binding operatorCommand}"
+                CommandParameter="5"
+                />
+            <Button 
+                x:Name="six"
+                Text="6"
+
+                Grid.Column="2"
+                Grid.Row="1"
+                Command ="{Binding operatorCommand}"
+                CommandParameter="6"
+                />
+            <Button 
+                x:Name="seven"
+                Text="7"
+
+                Grid.Column="0"
+                Grid.Row="2"
+                Command ="{Binding operatorCommand}"
+                CommandParameter="7"
+                />
+            <Button 
+                x:Name="eight"
+                Text="8"
+
+                Grid.Column="1"
+                Grid.Row="2"
+                Command ="{Binding operatorCommand}"
+                CommandParameter="8"
+                />
+            <Button 
+                x:Name="nine"
+                Text="9"
+
+                Grid.Column="2"
+                Grid.Row="2"
+                Command ="{Binding operatorCommand}"
+                CommandParameter="9"
+                />
+            <Button 
+                x:Name="zero"
+                Text="0"
+
+                Grid.Column="0"
+                Grid.Row="3"
+                Command ="{Binding operatorCommand}"
+                CommandParameter="0"
+                />
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

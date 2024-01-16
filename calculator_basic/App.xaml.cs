@@ -6,6 +6,6 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new calculator();
+		MainPage = new calculator_binding();
 	}
 }
