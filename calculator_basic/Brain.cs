@@ -10,69 +10,74 @@ using System.Threading.Tasks;
 
 namespace calculator_basic
 {
-    class Brain
-    {
-        private string label;
+    //class Brain
+    //{
+    //    private string label ="";
 
-        public event PropertyChangedEventHandler PropertyChanged;
+    //    private Microsoft.Maui.Controls.Label Labelpls = calculator_binding.lablebest;
 
-        void OnPropertyChanged([System.Runtime.CompilerServices.CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+    //    public event PropertyChangedEventHandler PropertyChanged;
 
-        public Command operatorCommand { get; set; }
-        public Command numberCommand { get; set; }
+    //    void OnPropertyChanged([System.Runtime.CompilerServices.CallerMemberName] string propertyName = null)
+    //    {
+    //        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    //    }
 
-        public Command solveCommand { get; set; }
+    //    public Command operatorCommand { get; set; }
+    //    public Command numberCommand { get; set; }
 
-        public Brain() 
-        {
-            operatorCommand = new Command<string>((p) => change_lable(p), (p) => p == null || p != null);
-            solveCommand = new Command<string>((p) => change_lable(solve()), (p) => isnumber(p));
-        }
+    //    public Command solveCommand { get; set; }
 
-        public bool isnumber(string p)
-        {
-            string usless = p;
-            if (label[label.Length - 1] > 47)
-            {
-                return true;
-            }
-            return false;
-        }
-        public void change_lable<T>(T p)
-        {
-            if (p is double) 
-            {
-                label = p.ToString();
-            }
-            else if (p.Equals("a/c"))
-            {
-                label = "";
-            }
-            else
-            {
-                label += p;
-            }
-            OnPropertyChanged();
-        }
+    //    public Brain() 
+    //    {
+    //        operatorCommand = new Command<string>((p) => change_lable(p));
+    //        solveCommand = new Command<string>((p) => change_lable(solve()), (p) => isnumber());
+    //    }
 
-        private double solve()
-        {
-            if (label == null)
-            {
-                return 0;
-            }
+    //    public bool isnumber()
+    //    {
+    //        if (label == "")
+    //        {
+    //            return false;
+    //        }
+    //        if (label[^1] > 47)
+    //        {
+    //            return true;
+    //        }
+    //        return false;
+    //    }
+    //    public void change_lable<T>(T p)
+    //    {
+    //        if (p is double) 
+    //        {
+    //            label = p.ToString();
+    //        }
+    //        else if (p.Equals("a/c"))
+    //        {
+    //            label = "";
+    //        }
+    //        else
+    //        {
+    //            label += p;
+    //        }
+    //        OnPropertyChanged();
+    //    }
 
-            double answer = 0;
-            string text = label;
-            DataTable table = new DataTable();
-            table.Columns.Add("expression", typeof(string), text);
-            DataRow row = table.NewRow();
-            table.Rows.Add(row);
-            answer = double.Parse((string)row["expression"]);
-            return answer;
-        }
-    }
+    //    private double solve()
+    //    {
+    //        if (label == null)
+    //        {
+    //            return 0;
+    //        }
+
+    //        double answer = 0;
+    //        string text = label;
+    //        DataTable table = new DataTable();
+    //        table.Columns.Add("expression", typeof(string), text);
+    //        DataRow row = table.NewRow();
+    //        table.Rows.Add(row);
+    //        answer = double.Parse((string)row["expression"]);
+    //        return answer;
+    //    }
+    //}
 }

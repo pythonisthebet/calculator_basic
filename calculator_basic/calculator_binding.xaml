@@ -5,12 +5,13 @@
              Title="calculator_binding">
     <VerticalStackLayout>
         <Label 
-            x:Name="lable"
-            Text="{Binding lable, Mode=TwoWay}"
+            x:Name="lablebest"
+            Text="{Binding label, Mode=TwoWay}"
             VerticalOptions="Center" 
             HorizontalOptions="Fill"
             BackgroundColor="LightCyan"
             Margin="20"
+            
 />
         <Grid 
             ColumnSpacing="5" 
