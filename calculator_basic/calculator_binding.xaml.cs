@@ -13,24 +13,24 @@ public partial class calculator_binding : ContentPage
         BindingContext = brain;
     }
 
-    class Brain
+    class Brain:INotifyPropertyChanged
     {
+
         private string label;
         public string Lable
         {
-            private set
+            set
             {
-                if (label != value)
-                {
-                    label = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Entry"));
-                }
+                label = value;
+                OnPropertyChanged();
             }
+
             get
             {
                 return label;
             }
         }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -66,18 +66,20 @@ public partial class calculator_binding : ContentPage
         {
             if (p is double)
             {
-                label = p.ToString();
+                Lable = p.ToString();
+                solveCommand.ChangeCanExecute();
             }
             else if (p.Equals("a/c"))
             {
-                label = "";
+                Lable = "";
+                operatorCommand.ChangeCanExecute();
             }
             else
             {
-                label += p;
+                Lable += p;
+                operatorCommand.ChangeCanExecute();
             }
-            OnPropertyChanged();
-            
+
         }
 
         private double solve()

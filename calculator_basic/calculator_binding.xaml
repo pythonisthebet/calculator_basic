@@ -6,11 +6,11 @@
     <VerticalStackLayout>
         <Label 
             x:Name="lablebest"
-            Text="{Binding label, Mode=TwoWay}"
+            Text="{Binding Lable, Mode=TwoWay}"
             VerticalOptions="Center" 
             HorizontalOptions="Fill"
             BackgroundColor="LightCyan"
-            Margin="20"
+            Margin="10"
             
 />
         <Grid 
@@ -35,7 +35,6 @@
                 x:Name="clear"
                 Text="Clear"
                 BackgroundColor="Orange"
-                
                 Grid.Row="3" 
                 Grid.Column="1"
                 Grid.ColumnSpan="2"
